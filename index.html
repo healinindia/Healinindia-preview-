@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <!-- Navigation Bar -->
     <nav>
-        <div class="menu-icon">
+        <div class="menu-icon" onclick="toggleMenu()">
             <span class="menu-bar"></span>
             <span class="menu-bar"></span>
             <span class="menu-bar"></span>
@@ -33,53 +34,68 @@
         </div>
     </header>
 
-    <!-- Features Section -->
-    <section class="features">
-        <h2>Why Choose Medcurex?</h2>
-        <div class="feature-list">
-            <div class="feature">
-                <h3>Personalized Care</h3>
-                <p>Dedicated case managers from consultation to recovery.</p>
-            </div>
-            <div class="feature">
-                <h3>Top Hospitals</h3>
-                <p>Partnered with JCI & NABH accredited hospitals.</p>
-            </div>
-            <div class="feature">
-                <h3>Fixed Pricing</h3>
-                <p>No hidden costs, transparent treatment packages.</p>
-            </div>
-            <div class="feature">
-                <h3>24/7 Support</h3>
-                <p>Multilingual support for seamless communication.</p>
-            </div>
+    <!-- Services Section -->
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service-item">
+            <h3>Liver Transplant</h3>
+            <p>Advanced treatment options for liver transplantation with high success rates.</p>
         </div>
+        <div class="service-item">
+            <h3>Heart Transplant</h3>
+            <p>State-of-the-art cardiology services and heart transplants.</p>
+        </div>
+        <div class="service-item">
+            <h3>Kidney Transplant</h3>
+            <p>Minimally invasive kidney transplant procedures with expert care.</p>
+        </div>
+        <div class="service-item">
+            <h3>Cancer Care</h3>
+            <p>Comprehensive cancer care including surgery, chemotherapy, and radiation.</p>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about-us">
+        <h2>About Us</h2>
+        <p>Medcurex offers personalized medical tourism services in India. We partner with top hospitals to provide world-class care at affordable rates. Our services include liver, heart, and kidney transplants, as well as cancer treatment and other advanced care options.</p>
     </section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2>Contact Us</h2>
         <p>Get in touch with us for consultation and queries.</p>
-        <div class="contact-info">
-            <p>Phone/WhatsApp: +91 7905456272</p>
-            <p>Secondary WhatsApp: +91 96432 90641</p>
-            <p>Email: healinindia5@gmail.com</p>
-            <p>Telegram: @HealinIndia1</p>
+        <form action="mailto:healinindia5@gmail.com" method="post" enctype="text/plain">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Your Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            <input type="submit" value="Send Message">
+        </form>
+        <div class="whatsapp">
+            <a href="https://wa.me/+917905456272" target="_blank">Chat with us on WhatsApp</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
         <p>© 2025 Medcurex. All Rights Reserved.</p>
+        <div class="social-media">
+            <a href="https://facebook.com">Facebook</a>
+            <a href="https://twitter.com">Twitter</a>
+            <a href="https://instagram.com">Instagram</a>
+        </div>
     </footer>
 
     <script>
-        const menuIcon = document.querySelector('.menu-icon');
-        const navList = document.querySelector('.nav-list');
-        
-        menuIcon.addEventListener('click', () => {
+        // Toggle the menu when clicking on the hamburger icon
+        function toggleMenu() {
+            const navList = document.querySelector('.nav-list');
             navList.classList.toggle('active');
-        });
+        }
     </script>
+
 </body>
 </html>
